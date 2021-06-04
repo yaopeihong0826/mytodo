@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <title>Canvas 01-MYT0D0</title>
+
+    <script>
+        function draw() {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            var img = new Image();
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0);
+                ctx.beginPath();
+                ctx.moveTo(30, 96);
+                ctx.lineTo(70, 66);
+                ctx.lineTo(103, 76);
+                ctx.lineTo(170, 15);
+                ctx.stroke();
+            }
+            img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+        }
+    </script>
+
+</head>
+
+<body onload="draw();">
+    <h1>Canvas 03 一个简单的线图</h1>
+    <canvas id="canvas" width="300px" height="300px"></canvas>
+</body>
+
+<html>

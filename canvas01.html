@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas 01 - MYTODO</title>
+    <script type="application/javascript">
+        function draw() {
+            var canvas = document.getElementById("canvas");
+            if (canvas.getContext) {
+                var ctx = canvas.getContext("2d");
+
+                ctx.fillStyle = "rgb(200,0,0)";
+                ctx.fillRect(10, 10, 55, 50);
+
+                ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+                ctx.fillRect(30, 30, 55, 50);
+            }
+        }
+    </script>
+
+</head>
+
+<body onload="draw();">
+    <h1>Canvas 01 两个长方形的动画</h1>
+    <canvas id="canvas" width="150" height="150"></canvas>
+</body>
+
+</html>
